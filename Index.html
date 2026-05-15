@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГО "Південні коні" | Southern Horses NGO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .lang-en { display: none; }
+    </style>
+    <script>
+        function setLanguage(lang) {
+            if (lang === 'en') {
+                document.querySelectorAll('.lang-ua').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'block');
+                document.documentElement.lang = 'en';
+            } else {
+                document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('.lang-ua').forEach(el => el.style.display = 'block');
+                document.documentElement.lang = 'uk';
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-extrabold text-blue-800 tracking-tight">ПІВДЕННІ КОНІ</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex space-x-6 mr-6 border-r pr-6 border-slate-200">
+                        <a href="#about" class="lang-ua text-slate-600 hover:text-blue-600 font-medium">Про нас</a>
+                        <a href="#about" class="lang-en text-slate-600 hover:text-blue-600 font-medium">About</a>
+                        <a href="#docs" class="lang-ua text-slate-600 hover:text-blue-600 font-medium">Документи</a>
+                        <a href="#docs" class="lang-en text-slate-600 hover:text-blue-600 font-medium">Documents</a>
+                    </div>
+                    <div class="flex bg-slate-100 rounded-lg p-1">
+                        <button onclick="setLanguage('ua')" class="px-3 py-1 text-xs font-bold rounded hover:bg-white transition">UA</button>
+                        <button onclick="setLanguage('en')" class="px-3 py-1 text-xs font-bold rounded hover:bg-white transition">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative bg-blue-900 py-24 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&q=80&w=2071')] bg-cover bg-center"></div>
+        <div class="relative max-w-7xl mx-auto px-4 text-center">
+            <h1 class="lang-ua text-5xl md:text-6xl font-extrabold mb-6">ГО «ПІВДЕННІ КОНІ»</h1>
+            <h1 class="lang-en text-5xl md:text-6xl font-extrabold mb-6">NGO "SOUTHERN HORSES"</h1>
+            
+            <p class="lang-ua text-xl md:text-2xl max-w-3xl mx-auto text-blue-100 mb-10">Розвиток південного регіону, підтримка громад та захист тварин.</p>
+            <p class="lang-en text-xl md:text-2xl max-w-3xl mx-auto text-blue-100 mb-10">Development of the southern region, community support, and animal protection.</p>
+            
+            <a href="#donate" class="bg-white text-blue-900 px-10 py-4 rounded-full font-extrabold text-lg shadow-xl hover:bg-blue-50 transition">
+                <span class="lang-ua">Зробити внесок</span>
+                <span class="lang-en">Donate Now</span>
+            </a>
+        </div>
+    </header>
+
+    <section id="donate" class="py-20 bg-blue-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-blue-100">
+                <h2 class="lang-ua text-3xl font-extrabold mb-8">Реквізити для допомоги</h2>
+                <h2 class="lang-en text-3xl font-extrabold mb-8">Support our mission</h2>
+                
+                <div class="space-y-6">
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                        <h4 class="font-bold text-blue-800 mb-2">PayPal (Global)</h4>
+                        <a href="mailto:southernhorsescare@gmail.com" class="text-lg font-bold break-all">southernhorsescare@gmail.com</a>
+                    </div>
+
+                    <div class="p-6 bg-yellow-50 rounded-2xl border border-yellow-200">
+                        <h4 class="lang-ua font-bold text-yellow-800 mb-4">Банківський переказ (UAH)</h4>
+                        <h4 class="lang-en font-bold text-yellow-800 mb-4">Bank Transfer (UAH)</h4>
+                        <div class="font-mono text-sm space-y-2">
+                            <p><strong>Beneficiary:</strong> NGO "SOUTHERN HORSES" / ГО "ПІВДЕННІ КОНІ"</p>
+                            <p><strong>Tax ID (ЄДРПОУ):</strong> 46292080</p>
+                            <p><strong>IBAN:</strong> UA523077700000026002111248300</p>
+                            <p><strong>Bank:</strong> A-BANK (А-БАНК)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="docs" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="oferta.html" class="p-6 bg-white rounded-2xl shadow hover:shadow-md border border-slate-100 transition">
+                <span class="text-2xl mb-2 block">⚖️</span>
+                <span class="lang-ua font-bold">Публічна оферта</span>
+                <span class="lang-en font-bold">Public Offer</span>
+            </a>
+            <a href="statut.pdf" target="_blank" class="p-6 bg-white rounded-2xl shadow hover:shadow-md border border-slate-100 transition">
+                <span class="text-2xl mb-2 block">📜</span>
+                <span class="lang-ua font-bold">Статут</span>
+                <span class="lang-en font-bold">Statute (Bylaws)</span>
+            </a>
+            <a href="zvit.pdf" target="_blank" class="p-6 bg-white rounded-2xl shadow hover:shadow-md border border-slate-100 transition">
+                <span class="text-2xl mb-2 block">📊</span>
+                <span class="lang-ua font-bold">Звіти</span>
+                <span class="lang-en font-bold">Reports</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center text-sm">
+        <p class="text-white font-bold mb-2 tracking-widest uppercase">NGO SOUTHERN HORSES</p>
+        <p>© 2024. ЄДРПОУ 46292080. Mykolaiv, Ukraine.</p>
+    </footer>
+
+</body>
+</html>
