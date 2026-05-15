@@ -3,117 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ГО "Південні коні" | Southern Horses NGO</title>
+    <title>ГО "Південні коні" | Southern Horses</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
         .lang-en { display: none; }
+        .scroll-mt { scroll-margin-top: 5rem; }
     </style>
     <script>
         function setLanguage(lang) {
-            if (lang === 'en') {
-                document.querySelectorAll('.lang-ua').forEach(el => el.style.display = 'none');
-                document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'block');
-                document.documentElement.lang = 'en';
-            } else {
-                document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
-                document.querySelectorAll('.lang-ua').forEach(el => el.style.display = 'block');
-                document.documentElement.lang = 'uk';
-            }
+            const isEn = lang === 'en';
+            document.querySelectorAll('.lang-ua').forEach(el => el.style.display = isEn ? 'none' : 'block');
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = isEn ? 'block' : 'none');
+            document.documentElement.lang = isEn ? 'en' : 'uk';
         }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-gray-50 text-slate-900">
 
-    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0">
-                    <span class="text-2xl font-extrabold text-blue-800 tracking-tight">ПІВДЕННІ КОНІ</span>
+    <!-- Навігація (Оптимізована для мобільних) -->
+    <nav class="bg-white/80 backdrop-blur-md border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
+            <span class="font-extrabold text-blue-800 text-lg tracking-tighter uppercase">Південні коні</span>
+            <div class="flex items-center gap-3">
+                <div class="flex bg-gray-100 rounded-full p-1 text-[10px] font-bold">
+                    <button onclick="setLanguage('ua')" class="px-2 py-1 rounded-full hover:bg-white transition">UA</button>
+                    <button onclick="setLanguage('en')" class="px-2 py-1 rounded-full hover:bg-white transition">EN</button>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <div class="hidden md:flex space-x-6 mr-6 border-r pr-6 border-slate-200">
-                        <a href="#about" class="lang-ua text-slate-600 hover:text-blue-600 font-medium">Про нас</a>
-                        <a href="#about" class="lang-en text-slate-600 hover:text-blue-600 font-medium">About</a>
-                        <a href="#docs" class="lang-ua text-slate-600 hover:text-blue-600 font-medium">Документи</a>
-                        <a href="#docs" class="lang-en text-slate-600 hover:text-blue-600 font-medium">Documents</a>
-                    </div>
-                    <div class="flex bg-slate-100 rounded-lg p-1">
-                        <button onclick="setLanguage('ua')" class="px-3 py-1 text-xs font-bold rounded hover:bg-white transition">UA</button>
-                        <button onclick="setLanguage('en')" class="px-3 py-1 text-xs font-bold rounded hover:bg-white transition">EN</button>
-                    </div>
-                </div>
+                <a href="#donate" class="bg-blue-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-sm">
+                    <span class="lang-ua">Допомогти</span><span class="lang-en">Donate</span>
+                </a>
             </div>
         </div>
     </nav>
 
-    <header class="relative bg-blue-900 py-24 text-white overflow-hidden">
-        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&q=80&w=2071')] bg-cover bg-center"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
-            <h1 class="lang-ua text-5xl md:text-6xl font-extrabold mb-6">ГО «ПІВДЕННІ КОНІ»</h1>
-            <h1 class="lang-en text-5xl md:text-6xl font-extrabold mb-6">NGO "SOUTHERN HORSES"</h1>
-            
-            <p class="lang-ua text-xl md:text-2xl max-w-3xl mx-auto text-blue-100 mb-10">Розвиток південного регіону, підтримка громад та захист тварин.</p>
-            <p class="lang-en text-xl md:text-2xl max-w-3xl mx-auto text-blue-100 mb-10">Development of the southern region, community support, and animal protection.</p>
-            
-            <a href="#donate" class="bg-white text-blue-900 px-10 py-4 rounded-full font-extrabold text-lg shadow-xl hover:bg-blue-50 transition">
-                <span class="lang-ua">Зробити внесок</span>
-                <span class="lang-en">Donate Now</span>
-            </a>
+    <!-- Головний екран -->
+    <header class="bg-blue-900 py-12 px-4 text-white text-center relative overflow-hidden">
+        <div class="relative z-10">
+            <h1 class="lang-ua text-3xl font-extrabold mb-3">ГО «ПІВДЕННІ КОНІ»</h1>
+            <h1 class="lang-en text-3xl font-extrabold mb-3">NGO "SOUTHERN HORSES"</h1>
+            <p class="lang-ua text-sm text-blue-100 opacity-80">Турбота, розвиток та підтримка Півдня[cite: 3]</p>
+            <p class="lang-en text-sm text-blue-100 opacity-80">Care, development, and support for the South[cite: 3]</p>
         </div>
     </header>
 
-    <section id="donate" class="py-20 bg-blue-50">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-blue-100">
-                <h2 class="lang-ua text-3xl font-extrabold mb-8">Реквізити для допомоги</h2>
-                <h2 class="lang-en text-3xl font-extrabold mb-8">Support our mission</h2>
-                
-                <div class="space-y-6">
-                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
-                        <h4 class="font-bold text-blue-800 mb-2">PayPal (Global)</h4>
-                        <a href="mailto:southernhorsescare@gmail.com" class="text-lg font-bold break-all">southernhorsescare@gmail.com</a>
-                    </div>
+    <!-- Новини -->
+    <section class="py-10 px-4 max-w-7xl mx-auto scroll-mt" id="news">
+        <h2 class="text-xl font-bold mb-6 border-l-4 border-blue-600 pl-3">
+            <span class="lang-ua">Останні новини</span><span class="lang-en">Latest News</span>
+        </h2>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                <span class="text-[10px] text-blue-600 font-bold uppercase">12.05.2024</span>
+                <h3 class="font-bold mt-1 lang-ua">Закупівля кормів для підопічних</h3>
+                <h3 class="font-bold mt-1 lang-en">Food supply for our horses</h3>
+                <p class="text-xs text-gray-500 mt-2 lang-ua">Завдяки вашим донатам ми придбали 2 тонни сіна.</p>
+                <p class="text-xs text-gray-500 mt-2 lang-en">Thanks to your donations, we purchased 2 tons of hay.</p>
+            </article>
+        </div>
+    </section>
 
-                    <div class="p-6 bg-yellow-50 rounded-2xl border border-yellow-200">
-                        <h4 class="lang-ua font-bold text-yellow-800 mb-4">Банківський переказ (UAH)</h4>
-                        <h4 class="lang-en font-bold text-yellow-800 mb-4">Bank Transfer (UAH)</h4>
-                        <div class="font-mono text-sm space-y-2">
-                            <p><strong>Beneficiary:</strong> NGO "SOUTHERN HORSES" / ГО "ПІВДЕННІ КОНІ"</p>
-                            <p><strong>Tax ID (ЄДРПОУ):</strong> 46292080</p>
-                            <p><strong>IBAN:</strong> UA523077700000026002111248300</p>
-                            <p><strong>Bank:</strong> A-BANK (А-БАНК)</p>
-                        </div>
+    <!-- Галерея -->
+    <section class="py-10 bg-white px-4">
+        <h2 class="text-xl font-bold mb-6 text-center">
+            <span class="lang-ua">Галерея</span><span class="lang-en">Gallery</span>
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&q=60&w=500" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&q=60&w=500" class="w-full h-full object-cover">
+            </div>
+            <!-- Додайте більше фото сюди -->
+        </div>
+    </section>
+
+    <!-- Донати (Покращено для мобільних) -->
+    <section id="donate" class="py-12 px-4 scroll-mt">
+        <div class="max-w-xl mx-auto bg-white rounded-3xl p-6 shadow-lg border border-blue-50">
+            <h2 class="lang-ua text-2xl font-bold mb-2">Підтримати нас</h2>
+            <h2 class="lang-en text-2xl font-bold mb-2">Support Us</h2>
+            <p class="text-xs text-gray-500 mb-6 lang-ua">Офіційні реквізити організації[cite: 3]</p>
+            <p class="text-xs text-gray-500 mb-6 lang-en">Official credentials[cite: 3]</p>
+
+            <div class="space-y-4">
+                <div class="p-4 bg-blue-50 rounded-xl border border-blue-100 text-center">
+                    <p class="text-[10px] font-bold text-blue-600 uppercase mb-1">PayPal</p>
+                    <a href="mailto:southernhorsescare@gmail.com" class="text-sm font-bold break-all">southernhorsescare@gmail.com</a>
+                </div>
+
+                <div class="p-4 bg-yellow-50 rounded-xl border border-yellow-200">
+                    <p class="text-[10px] font-bold text-yellow-700 uppercase mb-2 text-center">А-Банк (UAH)</p>
+                    <div class="text-[11px] font-mono space-y-1">
+                        <p class="flex justify-between"><span>EDRPOU:</span> <strong>46292080</strong>[cite: 2, 3]</p>
+                        <p class="flex flex-col"><span>IBAN:</span> <strong class="break-all">UA523077700000026002111248300</strong>[cite: 2, 3]</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="docs" class="py-20 max-w-7xl mx-auto px-4">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <a href="oferta.html" class="p-6 bg-white rounded-2xl shadow hover:shadow-md border border-slate-100 transition">
-                <span class="text-2xl mb-2 block">⚖️</span>
-                <span class="lang-ua font-bold">Публічна оферта</span>
-                <span class="lang-en font-bold">Public Offer</span>
-            </a>
-            <a href="statut.pdf" target="_blank" class="p-6 bg-white rounded-2xl shadow hover:shadow-md border border-slate-100 transition">
-                <span class="text-2xl mb-2 block">📜</span>
-                <span class="lang-ua font-bold">Статут</span>
-                <span class="lang-en font-bold">Statute (Bylaws)</span>
-            </a>
-            <a href="zvit.pdf" target="_blank" class="p-6 bg-white rounded-2xl shadow hover:shadow-md border border-slate-100 transition">
-                <span class="text-2xl mb-2 block">📊</span>
-                <span class="lang-ua font-bold">Звіти</span>
-                <span class="lang-en font-bold">Reports</span>
-            </a>
+    <!-- Документи -->
+    <footer id="docs" class="bg-slate-900 text-white py-12 px-4 text-center">
+        <div class="flex flex-wrap justify-center gap-4 mb-8 text-[11px] font-bold uppercase">
+            <a href="oferta.html" class="border border-slate-700 px-4 py-2 rounded-lg">Offer / Оферта[cite: 1]</a>
+            <a href="statut.pdf" class="border border-slate-700 px-4 py-2 rounded-lg">Statute / Статут[cite: 3]</a>
         </div>
-    </section>
-
-    <footer class="bg-slate-900 text-slate-400 py-12 text-center text-sm">
-        <p class="text-white font-bold mb-2 tracking-widest uppercase">NGO SOUTHERN HORSES</p>
-        <p>© 2024. ЄДРПОУ 46292080. Mykolaiv, Ukraine.</p>
+        <p class="text-[10px] text-slate-500">© 2024 NGO SOUTHERN HORSES / ГО ПІВДЕННІ КОНІ[cite: 3]</p>
     </footer>
 
 </body>
