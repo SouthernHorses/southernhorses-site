@@ -22,6 +22,7 @@
 </head>
 <body class="bg-gray-50 text-slate-900">
 
+    <!-- Навігація -->
     <nav class="bg-white/80 backdrop-blur-md border-b sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
             <span class="font-extrabold text-blue-800 text-lg tracking-tighter uppercase">Південні коні</span>
@@ -37,6 +38,7 @@
         </div>
     </nav>
 
+    <!-- Головний екран -->
     <header class="bg-blue-900 py-12 px-4 text-white text-center relative overflow-hidden">
         <h1 class="lang-ua text-3xl font-extrabold mb-3">ГО «ПІВДЕННІ КОНІ»</h1>
         <h1 class="lang-en text-3xl font-extrabold mb-3">NGO "SOUTHERN HORSES"</h1>
@@ -44,6 +46,7 @@
         <p class="lang-en text-sm text-blue-100 opacity-80">Care, development, and support for the South</p>
     </header>
 
+    <!-- Новини -->
     <section class="py-10 px-4 max-w-7xl mx-auto scroll-mt" id="news">
         <h2 class="text-xl font-bold mb-6 border-l-4 border-blue-600 pl-3">
             <span class="lang-ua">Останні новини</span><span class="lang-en">Latest News</span>
@@ -53,12 +56,34 @@
                 <span class="text-[10px] text-blue-600 font-bold uppercase">12.05.2024</span>
                 <h3 class="font-bold mt-1 lang-ua">Закупівля кормів</h3>
                 <h3 class="font-bold mt-1 lang-en">Food supply</h3>
-                <p class="text-xs text-gray-500 mt-2 lang-ua">Придбали 2 тонни сіна для наших коней.</p>
-                <p class="text-xs text-gray-500 mt-2 lang-en">Purchased 2 tons of hay for our horses.</p>
+                <p class="text-xs text-gray-500 mt-2 lang-ua">Завдяки вашим внескам ми придбали сіно для наших підопічних.</p>
+                <p class="text-xs text-gray-500 mt-2 lang-en">Thanks to your contributions, we purchased hay for our horses.</p>
             </article>
         </div>
     </section>
 
+    <!-- Галерея -->
+    <section class="py-10 bg-white px-4">
+        <h2 class="text-xl font-bold mb-6 text-center">
+            <span class="lang-ua">Галерея</span><span class="lang-en">Gallery</span>
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 max-w-7xl mx-auto">
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&q=60&w=500" class="w-full h-full object-cover" alt="Horse">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&q=60&w=500" class="w-full h-full object-cover" alt="Horse care">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1534073738927-4402660f7e4c?auto=format&fit=crop&q=60&w=500" class="w-full h-full object-cover" alt="Southern region">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&q=60&w=500" class="w-full h-full object-cover" alt="NGO activities">
+            </div>
+        </div>
+    </section>
+
+    <!-- Донати -->
     <section id="donate" class="py-12 px-4 scroll-mt">
         <div class="max-w-xl mx-auto bg-white rounded-3xl p-6 shadow-lg border border-blue-50">
             <h2 class="lang-ua text-2xl font-bold mb-6">Підтримати нас</h2>
@@ -79,12 +104,15 @@
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white py-12 px-4 text-center">
+    <!-- Футер та документи -->
+    <footer id="docs" class="bg-slate-900 text-white py-12 px-4 text-center">
         <div class="flex flex-wrap justify-center gap-4 mb-8 text-[11px] font-bold uppercase">
             <a href="oferta.html" class="border border-slate-700 px-4 py-2 rounded-lg">Offer / Оферта</a>
-            <a href="statut.pdf" class="border border-slate-700 px-4 py-2 rounded-lg">Statute / Статут</a>
+            <a href="statut.pdf" target="_blank" class="border border-slate-700 px-4 py-2 rounded-lg">Statute / Статут</a>
         </div>
-        <p class="text-[10px] text-slate-500">© 2024 NGO SOUTHERN HORSES / ГО ПІВДЕННІ КОНІ</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-widest">© 2024 NGO SOUTHERN HORSES / ГО ПІВДЕННІ КОНІ</p>
+        <p class="text-[9px] text-slate-600 mt-2">Mykolaiv, Ukraine</p>
     </footer>
+
 </body>
 </html>
